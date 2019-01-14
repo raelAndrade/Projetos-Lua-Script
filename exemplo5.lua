@@ -13,9 +13,9 @@ s5 = "Esse eh um 'texto' \ncom \"quebra\" de linha"
 -- print(s2)
 -- print(s3)
 -- print(s4)
--- print("O comprimento e: " .. tostring(#s5))
+print("O comprimento e: " .. tostring(#s5))
 
--- print(table.concat( {"Agua", "do", "mar"}, " - "))
+print(table.concat( {"Agua", "do", "mar"}, " - "))
 
 function join(sep, words)
 	return table.concat(words, sep)
