@@ -12,4 +12,3 @@ end
 conteudo = file:read "*a"
 print(conteudo)
 file:close()
-
