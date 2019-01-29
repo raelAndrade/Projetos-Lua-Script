@@ -1,4 +1,4 @@
-local open = io.open
+--[[local open = io.open
 
 local function read_file(path)
     local file = open(path, "rb") -- r read mode and b binary mode
@@ -10,7 +10,7 @@ end
 
 local fileContent = read_file("D:\\actions-treinamentos.txt");
 
-print (fileContent);
+print (fileContent);--]]
 
 -- ou por uma forma mais simplificada
 
@@ -23,3 +23,31 @@ end
 conteudo = file:read "*a"
 print(conteudo)
 file:close()--]]
+
+print(unpack{10,20,30,40}) -- imprimir todos os indices
+a, b = unpack{10,20,30} -- nesse caso o valor 30 é descartado
+
+function raiz_quadrada(a, b, c)
+	local delta = b ^ 2 - 4 * a * c
+	if delta < 0 then
+		print("A equacao nao possui raizes reais")
+	end
+		local x = (-b + math.sqrt(delta)) / (2 * a)
+		local y = (-b - math.sqrt(delta)) / (2 * a)	
+	return x, y
+end
+
+io.write("Informe o valor de a: ")
+a = io.read()
+io.write("Informe o valor de b: ")
+b = io.read()
+io.write("Informe o valor de c: ")
+c = io.read()
+
+x, y = raiz_quadrada(a,b,c)
+
+if x == y then
+	print("Raiz unica: " .. x or y)
+else
+	print("O valor de X eh: " .. x  .. "\n" .. "O valor de Y eh: " .. y)
+end
